@@ -1,22 +1,7 @@
-import { Canvas } from "@react-three/fiber/native";
+import Fiber from "@/components/Fiber";
 import { StyleSheet } from "react-native";
-
 export default function HomeScreen() {
-  return (
-    <Canvas style={{ flex: 1, backgroundColor: "black" }}>
-      <ambientLight />
-      <directionalLight position={[10, 10, 10]} />
-      <mesh
-        position={[0, 0, 0]}
-        onPointerDown={() => {
-          console.log("clicked");
-        }}
-      >
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="red" />
-      </mesh>
-    </Canvas>
-  );
+  return <Fiber />;
 }
 
 const styles = StyleSheet.create({

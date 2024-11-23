@@ -65,7 +65,11 @@ const onContextCreate = async (gl: ExpoWebGLRenderingContext) => {
 export const PureThree: React.FC = () => {
   return (
     <View style={{ flex: 1 }}>
-      <GLView style={{ flex: 1 }} onContextCreate={onContextCreate} />
+      <GLView
+        msaaSamples={0}
+        style={{ flex: 1 }}
+        onContextCreate={onContextCreate}
+      />
     </View>
   );
 };

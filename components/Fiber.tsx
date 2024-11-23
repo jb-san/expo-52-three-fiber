@@ -1,32 +1,30 @@
 import { Canvas, useFrame } from "@react-three/fiber/native";
-import React from "react";
+import React, { useRef } from "react";
+import { Mesh } from "three";
 
 export default function Fiber() {
   return (
-    <Canvas style={{ flex: 1, backgroundColor: "black" }}>
+    <Canvas style={{ flex: 1 }}>
       <ambientLight />
       <directionalLight position={[10, 10, 10]} />
       <Box />
-      <mesh
-        position={[1, 0, 0]}
-        onPointerDown={() => {
-          console.log("clicked");
-        }}
-      >
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="red" />
-      </mesh>
     </Canvas>
   );
 }
 function Box() {
+  const meshRef = useRef<Mesh>(null);
+
   useFrame(() => {
-    console.log("asdf");
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.01;
+      meshRef.current.rotation.y += 0.01;
+    }
   });
+
   return (
-    <mesh>
+    <mesh ref={meshRef}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="red" />
+      <meshNormalMaterial />
     </mesh>
   );
 }

@@ -1,0 +1,13 @@
+diff --git a/node_modules/three/build/three.cjs b/node_modules/three/build/three.cjs
+index b67b423..b231b07 100644
+--- a/node_modules/three/build/three.cjs
++++ b/node_modules/three/build/three.cjs
+@@ -20321,7 +20321,7 @@ function WebGLProgram( renderer, cacheKey, parameters, bindingStates ) {
+ 	function onFirstUse( self ) {
+ 
+ 		// check for link errors
+-		if ( renderer.debug.checkShaderErrors ) {
++		if ( renderer.debug.checkShaderErrors && program) {
+ 
+ 			const programLog = gl.getProgramInfoLog( program ).trim();
+ 			const vertexLog = gl.getShaderInfoLog( glVertexShader ).trim();

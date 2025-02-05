@@ -13,6 +13,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        unmountOnBlur: true,
         popToTopOnBlur: true,
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,

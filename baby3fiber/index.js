@@ -265,8 +265,8 @@ const render = (element, canvas, { size, camera, ...props } = {}) => {
   // If size isn't explicitly defined, we can assume it from the canvas
   if (!size) {
     size = {
-      width: canvas.parentElement?.clientWidth || 1000,
-      height: canvas.parentElement?.clientHeight || 1000,
+      width: canvas.parentElement?.clientWidth || 0,
+      height: canvas.parentElement?.clientHeight || 0,
     };
   }
 
@@ -288,10 +288,10 @@ const render = (element, canvas, { size, camera, ...props } = {}) => {
       alpha: true,
       ...gl,
     });
-    state.gl.setSize(gl.drawingBufferWidth, gl.drawingBufferHeight);
-    state.gl.setPixelRatio(1);
+    // state.gl.setSize(gl.drawingBufferWidth, gl.drawingBufferHeight);
+    // state.gl.setPixelRatio(1);
     console.log("state.gl", state.gl);
-    // if (gl) applyProps(state.gl, gl, {});
+    if (gl) applyProps(state.gl, gl, {});
     console.log("gl2", gl);
     // Set artist-friendly color management defaults
     state.gl.outputEncoding = THREE.sRGBEncoding;

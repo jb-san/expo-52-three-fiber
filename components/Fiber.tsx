@@ -4,7 +4,13 @@ import { Mesh } from "three";
 
 export default function Fiber() {
   return (
-    <Canvas style={{ flex: 1 }}>
+    <Canvas
+      style={{
+        flex: 1,
+        borderWidth: 1,
+        borderColor: "red",
+      }}
+    >
       <ambientLight />
       <directionalLight position={[10, 10, 10]} />
       <Box />

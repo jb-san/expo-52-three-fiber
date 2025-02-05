@@ -15,10 +15,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/config-plugins": "~9.0.0",
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/native": "^7.0.0",
     "@react-three/fiber": "^8.17.10",
+    "@types/react-reconciler": "^0.26.7",
     "@types/three": "^0.170.0",
     "expo": "~52.0.26",
     "expo-blur": "~14.0.3",
@@ -42,8 +44,8 @@
     "react-native-screens": "~4.4.0",
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.5",
-    "three": "^0.170.0",
-    "@expo/config-plugins": "~9.0.0"
+    "react-reconciler": "^0.27.0",
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

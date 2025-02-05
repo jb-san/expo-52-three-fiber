@@ -13,6 +13,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        popToTopOnBlur: true,
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
@@ -29,15 +30,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
+          popToTopOnBlur: true,
           title: "Pure Three",
         }}
       />
-      <Tabs.Screen
-        name="expo-three"
-        options={{
-          title: "Expo Three",
-        }}
-      />
+
       <Tabs.Screen
         name="fiber"
         options={{

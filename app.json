@@ -10,7 +10,8 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.applications-auki.testingapp"
+      "bundleIdentifier": "com.applications-auki.testingapp",
+      "appleTeamId": "49479XX86V"
     },
     "android": {
       "adaptiveIcon": {

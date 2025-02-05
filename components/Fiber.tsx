@@ -22,7 +22,12 @@ function Box() {
   });
 
   return (
-    <mesh ref={meshRef}>
+    <mesh
+      ref={meshRef}
+      onPointerDown={() => {
+        console.log("pointer down");
+      }}
+    >
       <boxGeometry args={[1, 1, 1]} />
       <meshNormalMaterial />
     </mesh>

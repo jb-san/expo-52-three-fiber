@@ -7,6 +7,7 @@ import * as THREE from "three";
 const onContextCreate = async (gl: ExpoWebGLRenderingContext) => {
   // Create a WebGLRenderer without using expo-three
   // const renderer = new THREE.WebGLRenderer({ context: gl, antialias: false });
+  console.log("gl", gl);
   const renderer = new THREE.WebGLRenderer({
     canvas: {
       width: gl.drawingBufferWidth,

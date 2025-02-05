@@ -1,6 +1,7 @@
 import Fiber from "@/components/Fiber";
 import { StyleSheet } from "react-native";
 export default function FiberScreen() {
+  // return null;
   return <Fiber />;
 }
 

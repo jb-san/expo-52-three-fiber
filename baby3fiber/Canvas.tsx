@@ -63,6 +63,7 @@ export default function Canvas({ children }: Props) {
     // TODO: this is wrong but necessary to trick controls
     // @ts-ignore
     canvas.ownerDocument = canvas;
+    canvas.parentElement = canvas;
     canvas.getRootNode = () => canvas;
     rootRef.current = createRoot(canvas);
 

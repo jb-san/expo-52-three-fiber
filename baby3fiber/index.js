@@ -265,8 +265,8 @@ const render = (element, canvas, { size, camera, ...props } = {}) => {
   // If size isn't explicitly defined, we can assume it from the canvas
   if (!size) {
     size = {
-      width: canvas.parentElement?.clientWidth || 500,
-      height: canvas.parentElement?.clientHeight || 500,
+      width: canvas.parentElement?.clientWidth || 1000,
+      height: canvas.parentElement?.clientHeight || 1000,
     };
   }
 
